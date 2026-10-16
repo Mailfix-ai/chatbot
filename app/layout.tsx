@@ -7,7 +7,8 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  description: "XOSH - votre assistant IA intelligent.",
+  description:
+    "XOSH - votre guide islamique : Coran, hadiths, Sunna, éducation et conseils spirituels.",
   metadataBase: new URL("https://chat.vercel.ai"),
   title: "XOSH",
 };
