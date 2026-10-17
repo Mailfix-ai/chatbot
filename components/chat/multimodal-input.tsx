@@ -63,6 +63,7 @@ import {
 } from "./slash-commands";
 import { SuggestedActions } from "./suggested-actions";
 import type { VisibilityType } from "./visibility-selector";
+import { VoiceInputButton } from "./voice-input-button";
 
 function setCookie(name: string, value: string) {
   const maxAge = 60 * 60 * 24 * 365;
@@ -558,6 +559,12 @@ function PureMultimodalInput({
             />
           </PromptInputTools>
 
+          <div className="flex items-center gap-1">
+          <VoiceInputButton
+            disabled={status !== "ready"}
+            input={input}
+            setInput={setInput}
+          />
           {status === "submitted" ? (
             <StopButton setMessages={setMessages} stop={stop} />
           ) : (
@@ -576,6 +583,7 @@ function PureMultimodalInput({
               <ArrowUpIcon className="size-4" />
             </PromptInputSubmit>
           )}
+          </div>
         </PromptInputFooter>
       </PromptInput>
     </div>
